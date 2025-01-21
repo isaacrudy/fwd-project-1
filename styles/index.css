@@ -1,0 +1,133 @@
+
+/* --------------------   Typography  ------------------------------- */
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #282828;
+	background-color: #888888;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Adamina", serif;
+	margin: .5em 0;
+	font-size: 2rem;
+}
+
+/* --------------------   Elements  ------------------------------- */
+
+header,
+footer {
+	padding: 1rem;
+	text-align: center;
+}
+
+section,
+aside {
+	padding: 0 1rem;
+}
+
+q::before,
+q::after {
+	content: '';
+}
+
+.site-wrapper {
+	max-width: 62.5rem;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* --------------------   Links  ------------------------------- */
+
+a,
+a:visited { 
+	color: black;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: black;
+	font-size: 1.15rem;
+}
+
+a:focus {
+	outline: 1px solid black;
+}
+
+/* --------------------   Header  ------------------------------- */
+
+header {
+    background-color: #B89ED5;
+	color: black;
+	box-shadow: 0 2px 4px 0 black;
+	position: relative;
+}
+
+
+.site-navigation {
+    width: 100%;
+}
+
+.site-navigation ul {
+    display: flex;
+	padding-left: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+
+/* --------------------   Main  ------------------------------- */
+
+main {
+	background-color: #9E9FD5;
+}
+
+/* title */
+
+.title {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: center;
+}
+
+.welcome > h1 {
+	text-align: center;
+	padding-right: 1rem;
+}
+
+.title img {
+	width: 50%;
+}
+
+/* About */
+
+/* Works */
+
+/* Testimonials */
+
+
+/* --------------------   Footer  ------------------------------- */
