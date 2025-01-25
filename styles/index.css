@@ -166,12 +166,19 @@ main {
   padding: 0.5rem;
   font-size: clamp(1rem, 2vw, 3rem);
   right: 0;
+  margin-top: 1rem;
 }
 
 .name {
   padding: 1rem;
   font-size: clamp(2rem, 4vw, 5rem);
   left: 0;
+}
+
+.roles {
+	list-style: none;
+	padding-left: 0;
+	padding: 1rem;
 }
 
 @media (min-width: 550px) {
@@ -245,7 +252,7 @@ main {
   border: 2px solid #6b23fa;
   border-radius: 1rem;
   margin: 1rem;
-  box-shadow: 2px #888888;
+  color: #6b23fa;
 }
 
 .tabs a:visited {
@@ -268,7 +275,7 @@ main {
 footer {
   flex-direction: column;
   justify-content: start;
-  display: relative;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
