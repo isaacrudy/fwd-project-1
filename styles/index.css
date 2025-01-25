@@ -1,4 +1,8 @@
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* --------------------   Typography  ------------------------------- */
 
 body {
@@ -19,6 +23,7 @@ h6 {
     font-family: "Adamina", serif;
 	margin: .5em 0;
 	font-size: 2rem;
+	text-align: center;
 }
 
 /* --------------------   Elements  ------------------------------- */
@@ -40,7 +45,7 @@ q::after {
 }
 
 .site-wrapper {
-	max-width: 62.5rem;
+	max-width: 125rem;
 	margin: 0 auto;
 	min-height: 100vh;
 	display: flex;
@@ -51,7 +56,7 @@ q::after {
 
 a,
 a:visited { 
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
@@ -59,21 +64,27 @@ a:hover,
 a:focus,
 a:active {
 	text-decoration: none;
-	color: black;
-	font-size: 1.15rem;
+	color: #FAED23;
+	font-size: 1.05rem;
 }
 
 a:focus {
-	outline: 1px solid black;
+	outline: 1px solid #FAED23;
 }
 
 /* --------------------   Header  ------------------------------- */
 
 header {
-    background-color: #B89ED5;
-	color: black;
+    background-color: #6B23FA;
+	color: white;
 	box-shadow: 0 2px 4px 0 black;
-	position: relative;
+	min-height: 7rem;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
 
@@ -87,14 +98,15 @@ header {
     list-style: none;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1rem;
 }
 
 
 /* --------------------   Main  ------------------------------- */
 
 main {
-	background-color: #9E9FD5;
+	padding-top: 7rem;
+	background-color: white;
+	color: #6B23FA;
 }
 
 /* title */
@@ -103,29 +115,49 @@ main {
 	display: flex;
 	flex-direction: row;
 	padding: 1rem;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
 .welcome {
 	display: flex;
-	flex-direction: column;
-	width: 50%;
 	justify-content: center;
+	align-items: center;
 }
 
-.welcome > h1 {
+.welcome .name,
+.role {
+	background-color: #6B23FA;
+	color: white;
+	border-radius: 5rem;
 	text-align: center;
-	padding-right: 1rem;
 }
 
-.title img {
-	width: 50%;
+.role {
+	border-radius: 5rem;
+	padding: 0.5rem;
 }
+
+.name {
+	padding: 1rem;
+}
+
+
 
 /* About */
 
+/* Had help from this website: https://www.w3schools.com/howto/howto_css_image_center.asp */
+.about img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border-radius: 5rem;
+}
+
 /* Works */
+
+
 
 /* Testimonials */
 
