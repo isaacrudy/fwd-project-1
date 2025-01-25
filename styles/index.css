@@ -1,17 +1,16 @@
-
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* --------------------   Typography  ------------------------------- */
 
 body {
-    font-family: "Libre Franklin", sans-serif;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #282828;
-	background-color: #888888;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b23fa;
+  background-color: #888888;
 }
 
 h1,
@@ -20,146 +19,257 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Adamina", serif;
-	margin: .5em 0;
-	font-size: 2rem;
-	text-align: center;
+  font-family: "Adamina", serif;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 3.5rem);
 }
 
 /* --------------------   Elements  ------------------------------- */
 
 header,
 footer {
-	padding: 1rem;
-	text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 section,
 aside {
-	padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 q::before,
 q::after {
-	content: '';
+  content: "";
 }
 
 .site-wrapper {
-	max-width: 125rem;
-	margin: 0 auto;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  max-width: 125rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* --------------------   Links  ------------------------------- */
 
 a,
-a:visited { 
-	color: white;
-	text-decoration: none;
+a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-	text-decoration: none;
-	color: #FAED23;
-	font-size: 1.05rem;
+  text-decoration: none;
+  color: #faed23;
+  font-size: 1.05rem;
 }
 
 a:focus {
-	outline: 1px solid #FAED23;
+  outline: 1px solid #faed23;
 }
 
 /* --------------------   Header  ------------------------------- */
 
-header {
-    background-color: #6B23FA;
-	color: white;
-	box-shadow: 0 2px 4px 0 black;
-	min-height: 7rem;
-	display: flex;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
+header,
+footer {
+  background-color: #6b23fa;
+  color: white;
+  box-shadow: 0 2px 4px 0 black;
+  min-height: 7rem;
+  display: flex;
+  align-items: center;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}
 
 .site-navigation {
-    width: 100%;
+  width: 100%;
 }
 
 .site-navigation ul {
-    display: flex;
-	padding-left: 0;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
+@media (min-width: 375px) {
+  .site-navigation ul {
+    align-items: end;
+  }
+
+  .site-navigation ul li a:hover,
+  .site-navigation ul li a:focus,
+  .site-navigation ul li a:active {
+    text-decoration: none;
+    color: #faed23;
+    font-size: 2.5rem;
+  }
+}
 
 /* --------------------   Main  ------------------------------- */
 
 main {
-	padding-top: 7rem;
-	background-color: white;
-	color: #6B23FA;
+  padding-top: 7rem;
+  background-color: white;
+  color: #6b23fa;
 }
 
 /* title */
 
 .title {
-	display: flex;
-	flex-direction: row;
-	padding: 1rem;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  position: relative;
 }
 
 .welcome {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.title img {
+  width: 100%;
 }
 
 .welcome .name,
 .role {
-	background-color: #6B23FA;
-	color: white;
-	border-radius: 5rem;
-	text-align: center;
+  background-color: #6b23fa;
+  color: white;
+  border-radius: 5rem;
+  text-align: center;
 }
 
 .role {
-	border-radius: 5rem;
-	padding: 0.5rem;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  font-size: clamp(1rem, 2vw, 3rem);
+  right: 0;
 }
 
 .name {
-	padding: 1rem;
+  padding: 1rem;
+  font-size: clamp(2rem, 4vw, 5rem);
+  left: 0;
 }
 
+@media (min-width: 550px) {
+  .welcome {
+    flex-direction: column;
+  }
 
+  .roles {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 /* About */
 
 /* Had help from this website: https://www.w3schools.com/howto/howto_css_image_center.asp */
+
 .about img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-	border-radius: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5rem;
+  max-width: 20rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  justify-self: center;
+  justify-content: space-around;
+}
+
+.about p {
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+}
+
+@media (min-width: 550px) {
+  .about-content {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .about img {
+		padding: 2rem;
+	}
+
+  .about p {
+    width: 50%;
+  }
 }
 
 /* Works */
 
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
+.tabs a img {
+  width: 15rem;
+  border-radius: 0.9rem 0.9rem 0 0rem;
+}
+
+.tabs a {
+  display: block;
+  border: 2px solid #6b23fa;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 2px #888888;
+}
+
+.tabs a:visited {
+  color: #6b23fa;
+  background-color: white;
+}
+
+.tabs a:focus,
+.tabs a:active,
+.tabs a:hover {
+  color: #6b23fa;
+  background-color: white;
+  padding: 1rem;
+}
 
 /* Testimonials */
 
-
 /* --------------------   Footer  ------------------------------- */
+
+footer {
+  flex-direction: column;
+  justify-content: start;
+  display: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

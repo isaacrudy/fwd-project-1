@@ -21,15 +21,17 @@
       <header>
         <nav class="site-navigation">
           <ul>
+            <li><a href="#title">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#works">My Works</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <section class="title">
+        <section class="title" id="title">
+          <!-- Image by Pixabay, found on: https://www.pexels.com/photo/white-dandelion-under-blue-sky-and-white-cloud-39669/ -->
+          <img src="images/hero-image.jpg" alt="A picture of a flower" />
           <section class="welcome">
             <h1 class="name">Isaac Rudy</h1>
             <section class="roles">
@@ -42,36 +44,55 @@
 
         <section class="about" id="about">
           <h2>About</h2>
-          <img src="images/isaac_rudy.jpg" alt="An image of me, Isaac Rudy" />
-          <p>
-            Isaac Rudy is a web developer from Vancouver, BC. He speaks both french and english, and is able 
-            create and design websites, as well as use SQL to interact with databases. He is an avid reader 
-            and likes to bring the creativity he sees in authors works into his websites.
-          </p>
+          <section class="about-content">
+            <img src="images/isaac_rudy.jpg" alt="An image of me, Isaac Rudy" />
+            <p>
+              I am a web developer from Vancouver, BC. I speaks both french and
+              english, and am able create and design websites, as well as use
+              SQL to interact with databases. I am an avid reader and like to
+              bring the creativity I sees in authors works into my websites.
+            </p>
+          </section>
         </section>
 
-        <section class="works">
-          <article class="work-example">
-            <img src="#" alt="A placeholder image">
-            <p>Coming Soon!</p>
-          </article>
-          <article class="work-example">
-            <img src="#" alt="A placeholder image">
-            <a href="#">Coming Soon!</a>
-          </article>
-          <article class="work-example">
-            <img src="#" alt="A placeholder image">
-            <a href="#">Coming Soon!</a>
-          </article>
-          <article class="work-example">
-            <img src="#" alt="A placeholder image">
-            <a href="#">Coming Soon!</a>
-          </article>
+        <section class="works" id="works">
+          <h2>Works</h2>
+          <section class="tabs">
+            <a href="#">
+              <article class="work-example">
+                <!-- Image by Leelo the first on pexels: https://www.pexels.com/photo/question-marks-on-paper-crafts-5428832/ -->
+                <img src="images/coming-soon.jpg" alt="A placeholder image" />
+                <p>Coming Soon!</p>
+              </article>
+            </a>
+            <a href="#">
+              <article class="work-example">
+                <!-- Image by Leelo the first on pexels: https://www.pexels.com/photo/question-marks-on-paper-crafts-5428832/ -->
+                <img src="images/coming-soon.jpg" alt="A placeholder image" />
+                <p>Coming Soon!</p>
+              </article>
+            </a>
+            <a href="#">
+              <article class="work-example">
+                <!-- Image by Leelo the first on pexels: https://www.pexels.com/photo/question-marks-on-paper-crafts-5428832/ -->
+                <img src="images/coming-soon.jpg" alt="A placeholder image" />
+                <p>Coming Soon!</p>
+              </article>
+            </a>
+            <a href="#">
+              <article class="work-example">
+                <!-- Image by Leelo the first on pexels: https://www.pexels.com/photo/question-marks-on-paper-crafts-5428832/ -->
+                <img src="images/coming-soon.jpg" alt="A placeholder image" />
+                <p>Coming Soon!</p>
+              </article>
+            </a>
+          </section>
         </section>
-
       </main>
-
-      <footer></footer>
+      <footer>
+        <a href="mailto:isaac.rudy@gmail.com">isaac.rudy@gmail.com</a>
+        <p>Copyright 2025</p>
+      </footer>
     </div>
   </body>
 </html>
